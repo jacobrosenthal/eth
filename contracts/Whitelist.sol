@@ -7,7 +7,7 @@ import "@openzeppelin/contracts-upgradeable/proxy/Initializable.sol";
 
 contract Whitelist is Initializable {
     bool whitelistEnabled;
-    uint256 public drip = 0.05 ether;
+    uint256 public drip;
     mapping(address => bool) allowedAccounts;
     mapping(bytes32 => bool) allowedKeyHashes;
     address[] allowedAccountsArray;
@@ -30,6 +30,7 @@ contract Whitelist is Initializable {
         public
         initializer
     {
+        drip = 0.05 ether;
         admin = _admin;
         whitelistEnabled = _whitelistEnabled;
     }

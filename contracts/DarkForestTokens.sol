@@ -5,9 +5,9 @@ import "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol";
 import "./DarkForestTypes.sol";
 
 contract DarkForestTokens is ERC721Upgradeable {
-    address coreAddress = address(0);
+    address coreAddress;
     mapping(uint256 => DarkForestTypes.Artifact) artifacts;
-    address adminAddress = address(0);
+    address adminAddress;
 
     function initialize(address _coreAddress, address _adminAddress) public initializer {
         coreAddress = _coreAddress;

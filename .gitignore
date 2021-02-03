@@ -8,3 +8,7 @@ yarn-error.log
 .openzeppelin/dev-*.json
 !.openzeppelin/dev-100.json
 .openzeppelin/.session
+
+#Hardhat files
+cache
+artifacts
